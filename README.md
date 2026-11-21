@@ -26,8 +26,7 @@ See [Render Static Sites](https://render.com/docs/static-sites) and the [Bluepri
 - `dist/styles.css` holds the layout, typography, and responsive styles.
 - `dist/project-media.css` styles the selected project previews.
 - `dist/wallpaper.mjs` renders the live backdrop, which responds to pointer movement and scroll position.
-- `dist/hero.mjs` contains the Three.js hero. Both scenes have CSS fallbacks when WebGL is unavailable.
-- `dist/motion.mjs` shares one pause control across both scenes, remembers the setting, and respects system reduced-motion preferences.
+- `dist/hero.mjs` contains the Three.js hero. Both scenes respect system reduced-motion preferences and have CSS fallbacks when WebGL is unavailable.
 - `dist/assets` contains the local artwork and font. `dist/vendor` includes the locally served Three.js modules and license.
 
 See [project artwork attribution](ASSET-CREDITS.txt) for sources and licenses.

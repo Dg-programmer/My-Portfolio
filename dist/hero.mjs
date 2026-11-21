@@ -232,8 +232,6 @@ function mountSculpture(canvas, frame) {
   scene.add(sculpture);
 
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-  const motionRoot = document.documentElement;
-  const motionPaused = () => reducedMotion.matches || motionRoot.dataset.motion === 'paused';
   const pointer = new THREE.Vector2();
   const tilt = new THREE.Vector2();
   const listeners = new AbortController();
@@ -267,7 +265,7 @@ function mountSculpture(canvas, frame) {
   }
 
   function syncMotion() {
-    if (usable && sized && visible && !document.hidden && !motionPaused()) {
+    if (usable && sized && visible && !document.hidden && !reducedMotion.matches) {
       if (!raf) raf = requestAnimationFrame(animate);
       return;
     }
@@ -298,11 +296,8 @@ function mountSculpture(canvas, frame) {
     visible = entry.isIntersecting;
     syncMotion();
   });
-  const motionObserver = new MutationObserver(syncMotion);
-  motionObserver.observe(motionRoot, { attributes: true, attributeFilter: ['data-motion'] });
-
   frame.addEventListener('pointermove', event => {
-    if (event.pointerType !== 'mouse' || motionPaused()) return;
+    if (event.pointerType !== 'mouse' || reducedMotion.matches) return;
     const rect = frame.getBoundingClientRect();
     pointer.set(
       THREE.MathUtils.clamp((event.clientX - rect.left) / rect.width * 2 - 1, -1, 1),
@@ -323,7 +318,6 @@ function mountSculpture(canvas, frame) {
     listeners.abort();
     sizeObserver.disconnect();
     visibilityObserver.disconnect();
-    motionObserver.disconnect();
     const materials = new Set();
     scene.traverse(object => {
       object.geometry?.dispose();

@@ -62,8 +62,6 @@ button { font: inherit; }
 }
 
 #wallpaper-canvas[data-ready="true"] { opacity: 1; }
-html[data-motion="paused"] { scroll-behavior: auto; }
-html[data-motion="paused"] #wallpaper-canvas { transition: none; }
 
 .shell {
   width: min(calc(100% - 2 * var(--gutter)), 1280px);
@@ -558,9 +556,11 @@ h2 {
   padding-block: clamp(56px, 7vw, 100px);
 }
 
-.contact h2 { font-size: clamp(3.3rem, 7vw, 6.8rem); }
+.contact h2 {
+  font-size: clamp(3.3rem, 7vw, 6.8rem);
+  text-wrap: balance;
+}
 .contact .eyebrow { color: #b7ccff; }
-.contact-main p:not(.eyebrow) { max-width: 47ch; margin-top: 1rem; color: #cbd8ef; }
 .contact-links { justify-content: end; }
 .contact-links .button-outline { border-color: #9ab7ed80; background: #122652b5; }
 .contact-links .button-outline:hover { background: #2b4a8a; border-color: #cedfff; }
@@ -577,19 +577,7 @@ h2 {
 }
 
 .footer-base span { padding-inline: .22em; color: var(--blue); }
-.footer-links { display: flex; flex-wrap: wrap; align-items: center; gap: .3rem 1.4rem; }
-.footer-motion {
-  min-height: 44px;
-  padding: 0;
-  border: 0;
-  background: transparent;
-  color: inherit;
-  font: inherit;
-  text-decoration: underline;
-  text-underline-offset: .22em;
-  cursor: pointer;
-}
-.footer-links :is(a, button):hover { color: var(--accent); }
+.footer-base a:hover { color: var(--accent); }
 
 @media (max-width: 1050px) {
   .hero-visual { inset-inline-start: 33%; }

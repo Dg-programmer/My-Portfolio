@@ -153,7 +153,7 @@ function mountWallpaper(canvas) {
   let pointerY = 0;
 
   function canAnimate() {
-    return pipeline && !document.hidden && !motionPreference.matches && root.dataset.motion !== 'paused';
+    return pipeline && !document.hidden && !motionPreference.matches;
   }
 
   function paint() {
@@ -233,8 +233,6 @@ function mountWallpaper(canvas) {
     }
   }
 
-  const motionObserver = new MutationObserver(syncMotion);
-  motionObserver.observe(root, { attributes: true, attributeFilter: ['data-motion'] });
   const contentObserver = new ResizeObserver(updateScrollRange);
   contentObserver.observe(document.body);
 
@@ -272,7 +270,6 @@ function mountWallpaper(canvas) {
     if (event.persisted) return;
     stop();
     controller.abort();
-    motionObserver.disconnect();
     contentObserver.disconnect();
     if (pipeline) {
       gl.deleteBuffer(pipeline.triangle);
