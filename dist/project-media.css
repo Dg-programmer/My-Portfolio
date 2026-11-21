@@ -1,0 +1,52 @@
+.project-media {
+  position: relative;
+  display: block;
+  isolation: isolate;
+  aspect-ratio: 5 / 3;
+  overflow: hidden;
+  background-color: #081426;
+}
+
+.project-media--cash {
+  background-image: url("./assets/cash-flow-chart.webp");
+  background-position: center;
+  background-size: cover;
+}
+
+.project-media--garage::before,
+.project-media--garage::after,
+.project-media--baby::before,
+.project-media--baby::after {
+  position: absolute;
+  inset: 0;
+  display: block;
+  content: "";
+  pointer-events: none;
+}
+
+.project-media--garage::before {
+  background: url("./assets/lambo-garage.webp") center 53% / cover no-repeat;
+  filter: brightness(.87) contrast(1.08) saturate(.87);
+}
+
+.project-media--garage::after {
+  background:
+    linear-gradient(126deg, #254fa33c 0%, transparent 60%),
+    linear-gradient(0deg, #050d1b42 0%, transparent 30%);
+}
+
+.project-media--baby {
+  background:
+    radial-gradient(ellipse at 50% 56%, #2b59b4 0%, #142b5a 46%, transparent 81%),
+    linear-gradient(153deg, #14274e, #081426 74%);
+}
+
+.project-media--baby::before {
+  background: radial-gradient(circle, #a8c5ff34 1px, transparent 1px) center / 13px 13px;
+  mask-image: radial-gradient(ellipse at 50% 60%, #000, transparent 76%);
+}
+
+.project-media--baby::after {
+  background: url("./assets/baby-companion.webp") center 50% / auto 86% no-repeat;
+  filter: drop-shadow(0 9px 11px #0209117a);
+}

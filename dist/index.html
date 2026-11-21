@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b12">
+  <meta name="description" content="Dhruvil Gohil’s portfolio of software engineering, financial analytics, and applied AI projects. Based in Mumbai, India.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Dhruvil Gohil — Software, Data & AI">
+  <meta property="og:description" content="Selected projects and engineering experience from Dhruvil Gohil, a B.Tech student in Mumbai.">
+  <title>Dhruvil Gohil — Software, Data &amp; AI</title>
+  <link rel="icon" href="./assets/mark.png" type="image/png">
+  <link rel="preload" href="./assets/inter.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./project-media.css">
+  <script type="module" src="./motion.mjs"></script>
+  <script type="module" src="./wallpaper.mjs"></script>
+  <script type="module" src="./hero.mjs"></script>
+</head>
+<body id="top">
+  <div class="wallpaper" aria-hidden="true">
+    <canvas id="wallpaper-canvas"></canvas>
+  </div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="#top" aria-label="Dhruvil Gohil, home">
+        <span class="brand-mark" aria-hidden="true">DG<span>.</span></span>
+        <span class="brand-name" aria-hidden="true">Dhruvil Gohil</span>
+      </a>
+      <nav aria-label="Main navigation" class="site-nav">
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#about">About</a>
+      </nav>
+      <a class="header-contact" href="#contact">Contact</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="shell hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow hero-eyebrow"><span aria-hidden="true"></span> Software / Data / AI</p>
+          <h1 id="hero-title">Dhruvil<br><span class="hero-surname">Gohil</span><span class="hero-dot">.</span></h1>
+          <p class="hero-description">I build software and analytics tools, with a focus on finance and applied AI.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">View projects</a>
+            <a class="button button-outline" href="#experience">Experience</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="hero-fallback" aria-hidden="true">
+            <span></span><span></span><span></span>
+          </div>
+          <canvas id="hero-canvas" aria-hidden="true"></canvas>
+        </div>
+      </div>
+      <dl class="shell hero-meta">
+        <div>
+          <dt>Location</dt>
+          <dd>Mumbai, India</dd>
+        </div>
+        <div>
+          <dt>Education</dt>
+          <dd>B.Tech · AI &amp; ML Honors</dd>
+        </div>
+        <div>
+          <dt>Finance</dt>
+          <dd>CFA® Program Level I candidate</dd>
+        </div>
+      </dl>
+    </section>
+
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Portfolio</p>
+            <h2 id="projects-title">Selected projects</h2>
+          </div>
+          <p>Work across financial analytics, conversational AI, and interactive 3D.</p>
+        </div>
+        <div class="project-grid">
+          <article class="project">
+            <div class="project-media project-media--cash" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-type">Financial analytics</p>
+              <h3>Cash Flow Lab</h3>
+              <p>Model bond prices, dividends, and investment returns with interactive charts and what-if scenarios.</p>
+              <ul class="stack" aria-label="Cash Flow Lab technologies">
+                <li>React</li><li>Node.js</li><li>Three.js</li><li>Power BI</li>
+              </ul>
+              <details class="project-details">
+                <summary>Technical details</summary>
+                <p>The Node.js calculation engine powers the React interface and Three.js charts. Saved scenarios feed a refreshable Power BI report. A Gemini assistant uses the active scenario to explain the inputs and results.</p>
+              </details>
+              <div class="project-links">
+                <a href="https://github.com/Dg-programmer/Financial-Analytics" aria-label="Cash Flow Lab source on GitHub">Source code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media project-media--baby" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-type">Conversational AI</p>
+              <h3>BABY Chatbot</h3>
+              <p>A voice and text assistant with streaming replies, attachment analysis, and a companion for Windows.</p>
+              <ul class="stack" aria-label="BABY Chatbot technologies">
+                <li>Gemini</li><li>Node.js</li><li>C#</li><li>WebView2</li>
+              </ul>
+              <details class="project-details">
+                <summary>Technical details</summary>
+                <p>Users can ask follow-up questions about attachments within a conversation. The always-on-top Windows companion uses WinForms and WebView2 and lets users review text captured with local OCR.</p>
+              </details>
+              <div class="project-links">
+                <a href="https://baby-voice.onrender.com/" aria-label="Open the BABY Chatbot demo">Live demo</a>
+                <a href="https://github.com/Dg-programmer/Chatbot" aria-label="BABY Chatbot source on GitHub">Source code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project">
+            <div class="project-media project-media--garage" aria-hidden="true"></div>
+            <div class="project-body">
+              <p class="project-type">Interactive 3D</p>
+              <h3>Lambo Garage AI</h3>
+              <p>Explore a Lamborghini Huracán STO in 3D and pull apart six vehicle assemblies to inspect their components.</p>
+              <ul class="stack" aria-label="Lambo Garage AI technologies">
+                <li>Three.js</li><li>MediaPipe</li><li>WebGL</li>
+              </ul>
+              <details class="project-details">
+                <summary>Technical details</summary>
+                <p>MediaPipe hand tracking lets visitors select parts and control the camera with webcam gestures. The showroom also supports mouse, keyboard, and touch.</p>
+              </details>
+              <div class="project-links">
+                <a href="https://github.com/Dg-programmer/Lambo-garage-3d-ai" aria-label="Lambo Garage AI source on GitHub">Source code</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="other-projects">
+          <h3>More projects</h3>
+          <article class="project-row">
+            <div>
+              <h4>Paste App</h4>
+              <p class="project-type">Full-stack web app · In development</p>
+            </div>
+            <p>Save, edit, and share text or code snippets. The interface uses React and Redux Toolkit.</p>
+            <a href="https://github.com/Dg-programmer/PasteApp" aria-label="Paste App source on GitHub">Source code</a>
+          </article>
+          <article class="project-row">
+            <div>
+              <h4>Sports Management System</h4>
+              <p class="project-type">Data analytics</p>
+            </div>
+            <p>A MySQL database, Python analytics pipeline, and Streamlit dashboard for tracking sports performance.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience" aria-labelledby="experience-title">
+      <div class="shell">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Internships</p>
+            <h2 id="experience-title">Experience</h2>
+          </div>
+          <p>Production software development and operational reporting.</p>
+        </div>
+        <div class="timeline">
+          <article class="role">
+            <div class="role-meta">
+              <p class="role-company">AICAN</p>
+              <p class="role-date">Jun – Dec 2026</p>
+            </div>
+            <div class="role-copy">
+              <h3>Software Development Intern</h3>
+              <ul>
+                <li>Built a Chrome extension to record and transcribe Google Meet sessions and integrated it into AICAN’s platform.</li>
+                <li>Led the mobile redesign of a React and TypeScript application and tested the redesigned modules for feature parity with desktop.</li>
+                <li>Tested and debugged microservice APIs in a TypeScript monorepo and contributed fixes and features across the frontend and backend.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="role">
+            <div class="role-meta">
+              <p class="role-company">Hireyy</p>
+              <p class="role-date">Dec 2025 – Feb 2026</p>
+            </div>
+            <div class="role-copy">
+              <h3>MIS Trainee</h3>
+              <ul>
+                <li>Cleaned and validated datasets to improve the accuracy of recurring operational reports.</li>
+                <li>Built Excel trackers with formulas and pivot tables and documented the reporting workflow.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="shell about-layout">
+        <div class="about-profile">
+          <p class="eyebrow">Background</p>
+          <h2 id="about-title">About me</h2>
+          <p>I’m an engineering student in Mumbai. I’m interested in the systems behind a good analysis, from getting the data right to giving people a clear way to explore it.</p>
+          <div class="education">
+            <p class="eyebrow">Education</p>
+            <h3>Dwarkadas J. Sanghvi College of Engineering</h3>
+            <p>B.Tech in Electronics &amp; Telecommunication<br>Honors in Artificial Intelligence &amp; Machine Learning</p>
+            <p class="education-meta">2023–2027 <span>·</span> CGPA 8.288 / 10</p>
+          </div>
+        </div>
+        <div class="toolkit">
+          <h3>Technical toolkit</h3>
+          <dl>
+            <div><dt>Software</dt><dd>TypeScript, JavaScript, React, Redux Toolkit, Node.js, Express, Git</dd></div>
+            <div><dt>Data</dt><dd>Python, SQL, Pandas, NumPy, MySQL, PostgreSQL, BigQuery</dd></div>
+            <div><dt>Reporting</dt><dd>Excel, Power BI, Tableau, Streamlit</dd></div>
+            <div><dt>Applied AI &amp; 3D</dt><dd>Gemini, Three.js</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact" class="contact" aria-labelledby="contact-title">
+    <div class="shell">
+      <div class="contact-main">
+        <div>
+          <p class="eyebrow">Contact</p>
+          <h2 id="contact-title">Let’s talk<span>.</span></h2>
+          <p>Have a project or a role in mind? I’d like to hear what you’re working on.</p>
+        </div>
+        <div class="contact-links">
+          <a class="button button-primary" href="mailto:g.dhruvil.1001@gmail.com">Email me</a>
+          <a class="button button-outline" href="https://www.linkedin.com/in/dhruvil-gohil-00b174219/">LinkedIn</a>
+          <a class="button button-outline" href="https://github.com/Dg-programmer">GitHub</a>
+        </div>
+      </div>
+      <div class="footer-base">
+        <p>Dhruvil Gohil <span>·</span> Mumbai, India</p>
+        <div class="footer-links">
+          <button class="footer-motion" type="button" data-motion-toggle hidden>Pause motion</button>
+          <a href="#top">Back to top</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

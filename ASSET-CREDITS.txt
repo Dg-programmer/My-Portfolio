@@ -1,0 +1,25 @@
+Cash Flow Lab
+Illustrative chart based on a five-year fixed-rate bond with $1,000 face value, 8% annual coupons, and yields from 4% to 12%.
+
+Lambo Garage AI
+The portfolio preview is sourced from Dhruvil Gohil's independent 3D showroom. The portfolio styles crop the image and apply a cool tint.
+https://github.com/Dg-programmer/Lambo-garage-3d-ai
+
+The showroom's exterior and cabin are adapted from Lamborghini Huracan STO 2020 by Raakesh.Madan under CC BY 4.0. Materials were adjusted and the mesh was divided into inspectable parts.
+https://sketchfab.com/3d-models/lamborghini-huracan-sto-2020-1d10481ff96246d4b67242bddd394d43
+https://creativecommons.org/licenses/by/4.0/
+
+The showroom's brake cutaway is adapted from Brake Disk Sport Carbon Ceramic by the 86 guy under CC BY 4.0. The model was rescaled and its markings and finish were changed. Both models were sourced through Ai2 Objaverse.
+https://sketchfab.com/3d-models/brake-disk-sport-carbon-ceramic-89de11361d504f479e5cb2df427699ab
+https://huggingface.co/datasets/allenai/objaverse
+
+The opening view follows Lamborghini's Huracán STO launch photography.
+https://www.lamborghini.com/es-en/noticias/new-lamborghini-huracan-sto-from-racetrack-to-road
+
+The garage uses Small Workshop by Dimitrios Savva and Jarod Guest for ambient reflections and Concrete Floor Worn 001 by Dimitrios Savva and Rico Cilliers for the floor surface. Both Poly Haven assets are CC0.
+https://polyhaven.com/a/small_workshop
+https://polyhaven.com/a/concrete_floor_worn_001
+
+BABY
+Companion artwork sourced from Dhruvil Gohil's BABY project.
+https://github.com/Dg-programmer/Chatbot
